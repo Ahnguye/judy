@@ -1,0 +1,50 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content class="content-container">
+  <div class="counselor-bar">
+    <button clear color="dark" ion-button icon-left icon-only button-inner>
+      <ion-icon name="ios-arrow-back"></ion-icon>
+    </button>
+    <img class="counselor" src="https://i.pinimg.com/236x/5b/9d/ab/5b9dab8e378bbd047fc0895731959f4a.jpg"/>
+    <button clear color="dark" ion-button icon-right icon-only button-inner>
+      <ion-icon name="ios-information-circle-outline"></ion-icon>
+    </button>
+  </div>
+
+  <ion-list *ngFor="let message of messageArray">
+    <ion-item>
+      <ion-avatar item-start>
+      </ion-avatar>
+      <div class= "message-box" [ngStyle]="{'background-image': 'url(' + this.receiveImgPath + ')'}">
+        <div class= "message-box-text">
+          {{message.message}}
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="input-container">
+      <ion-list class="input-box">
+        <ion-item>
+          <ion-input type="text" value="Enter Message"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <button color="dark" ion-button icon-right icon-only class="input-button">
+        <ion-icon name="ios-send"></ion-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
+
+</ion-content>
