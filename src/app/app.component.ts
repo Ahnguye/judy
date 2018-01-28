@@ -9,8 +9,8 @@ import * as firebase from 'firebase';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  //rootPage:any = TabsPage;
-  rootPage: any;
+  rootPage:any = TabsPage;
+  //rootPage: any;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
     firebase.initializeApp({

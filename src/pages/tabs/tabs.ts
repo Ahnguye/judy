@@ -13,8 +13,8 @@ import { CounselorMyPage } from '../counselor-my/counselor-my';
 })
 export class TabsPage {
 
-  tab1Root = ProfilePage;
-  tab2Root = AboutPage;
+  tab1Root = HomePage;
+  tab2Root = ProfilePage;
   tab3Root = ContactPage;
 
 
