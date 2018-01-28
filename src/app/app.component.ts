@@ -6,6 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
+  selector: 'app-root',
+  styles: [`
+    agm-map {
+      height: 300px;
+    }
+  `],
   templateUrl: 'app.html'
 })
 export class MyApp {
@@ -19,4 +25,10 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+}
+
+
+export class AppComponent {
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 }

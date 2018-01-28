@@ -10,12 +10,17 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
 import { ProfilePage } from '../pages/profile/profile';
+import { UberPage } from '../pages/uber/uber';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { CallNumber } from '@ionic-native/call-number';
+
+import { AgmCoreModule } from '@agm/core';
 
 var firebaseConfig = {
   apiKey: "AIzaSyBDCGL3aHjA8UoaoIP77_cCabHeOSuGxcg",
@@ -35,13 +40,17 @@ var firebaseConfig = {
     TabsPage,
     WriteNewPostPage,
     ChatPage,
-    ProfilePage
+    ProfilePage,
+    UberPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCLfB3jNyWIrNr6bCMBHsEDXW-UySLxrUY'
+    })
 
   ],
   bootstrap: [IonicApp],
@@ -53,11 +62,13 @@ var firebaseConfig = {
     TabsPage,
     WriteNewPostPage,
     ChatPage,
-    ProfilePage
+    ProfilePage,
+    UberPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CallNumber,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

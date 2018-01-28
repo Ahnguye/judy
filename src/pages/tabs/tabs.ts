@@ -5,6 +5,7 @@ import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { ChatPage } from '../chat/chat';
 import { ProfilePage } from '../profile/profile';
+import { UberPage } from '../uber/uber';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = AboutPage;
-  tab3Root = ProfilePage;
+  tab3Root = UberPage;
 
   constructor() {
 
