@@ -1,0 +1,111 @@
+<!--
+  Generated template for the CounselorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Choose your counselor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- <ion-slides pager>
+
+    <ion-slide style="background-color: green">
+      <h2>Slide 1</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: blue">
+      <h2>Slide 2</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: red">
+      <h2>Slide 3</h2>
+    </ion-slide>
+
+  </ion-slides> -->
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let c of counselors | async">
+      <div class="PersonalInfo">
+        <img src={{c.pic}} alt="dog">
+        <ion-row>
+          <ion-col style="font-size:20px; padding-top:10px; margin-left: 15px">
+            {{c.name}}
+          </ion-col>
+          <ion-col style="font-size:20px; padding-top:10px; margin-right: 15px">
+            {{c.rating}}<ion-icon name="star"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size:14px; margin-left: 15px">
+            Name
+          </ion-col>
+          <ion-col style="font-size:14px; margin-right: 15px">
+            Rating
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="ContactInfo">
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="call"></ion-icon> &nbsp; phone : {{c.Phone_num}}
+          </ion-col>
+        </ion-row>
+        <ion-row padding-bottom>
+          <ion-col text-left>
+            <ion-icon name="mail"></ion-icon> &nbsp; email : {{c.email}}
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <button class="gochat" (click)="goChat()" ion-button medium color="dark">Go Chat</button>
+    </ion-slide>
+<!--
+    <ion-slide>
+      <div class="PersonalInfo">
+        <img src="/assets/imgs/dog.jpg" alt="dog">
+        <ion-row>
+          <ion-col style="font-size:20px; padding-top:10px;">
+            David
+          </ion-col>
+          <ion-col style="font-size:20px; padding-top:10px;">
+            4.85<ion-icon name="star-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size:14px">
+            Name
+          </ion-col>
+          <ion-col style="font-size:14px">
+            Rating
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="ContactInfo">
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="call"></ion-icon> &nbsp; phone : (123)-456-7890
+          </ion-col>
+        </ion-row>
+        <ion-row padding-bottom>
+          <ion-col text-left>
+            <ion-icon name="mail"></ion-icon> &nbsp; email : email@email.com
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <button class="gochat" ion-button medium color="dark">Go Chat</button>
+    </ion-slide> -->
+  </ion-slides>
+
+</ion-content>
+<ion-footer>
+
+</ion-footer>

@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
+import { CounselorPage } from '../pages/counselor/counselor';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,9 +20,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthProvider } from '../providers/auth/auth';
 import { EventProvider } from '../providers/event/event';
 import { ProfileProvider } from '../providers/profile/profile';
-
-
-
 
 var firebaseConfig = {
   apiKey: "AIzaSyBDCGL3aHjA8UoaoIP77_cCabHeOSuGxcg",
@@ -40,14 +38,14 @@ var firebaseConfig = {
     HomePage,
     TabsPage,
     WriteNewPostPage,
-    ChatPage
+    ChatPage,
+    CounselorPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +55,8 @@ var firebaseConfig = {
     HomePage,
     TabsPage,
     WriteNewPostPage,
-    ChatPage
+    ChatPage,
+    CounselorPage
   ],
   providers: [
     StatusBar,
