@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { WriteNewPostPage } from '../write-new-post/write-new-post';
 import { ChatPage } from '../chat/chat';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +19,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public af: AngularFireDatabase) {
     this.afPosts = af.list('/POSTS/');
-
     this.UrCategory = [
       { title: 'food' },
       { title: 'family' }
@@ -30,7 +30,6 @@ export class HomePage {
       }
     );
 
-    console.log(this.posts);
   }
 
   writeNewPost() {
@@ -39,6 +38,10 @@ export class HomePage {
 
   goChat() {
     this.navCtrl.push(ChatPage);
+  }
+
+  goLogin() {
+    this.navCtrl.push(LoginPage);
   }
 
 }
