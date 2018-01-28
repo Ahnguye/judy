@@ -1,17 +1,72 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Resources
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button large (click)='foodAlert()'>
+        <ion-icon name="nutrition"></ion-icon>
+          <h1>Nutrition</h1>
+          </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button large (click)='ShelterAlert()'>
+        <ion-icon name="home"></ion-icon>
+          <h1> Housing</h1>
+          </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button large (click)='LaborAlert()'>
+        <ion-icon name="hammer"></ion-icon>
+          <h1> Labor</h1>
+          </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button large (click)='ImmagrationAlert()'>
+        <ion-icon name="paper-plane"></ion-icon>
+          <h1> Immagration</h1>
+          </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button large (click)='LGBTAlert()'>
+        <ion-icon name="transgender"></ion-icon>
+          <h1> LGBT</h1>
+          </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button large (click)='HealthAlert()'>
+        <ion-icon name="medkit"></ion-icon>
+          <h1> Health</h1>
+          </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button large (click)='AbuseAlert()'>
+        <ion-icon name="hand"></ion-icon>
+          <h1> Abuse</h1>
+          </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button large (click)='WomenAlert()'>
+        <ion-icon name="female"></ion-icon>
+          <h1> Women</h1>
+          </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button large (click)='CarAlert()'>
+        <ion-icon name="ios-clock"></ion-icon>
+        <h1> clock</h1>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
