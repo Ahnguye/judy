@@ -8,6 +8,12 @@
 
 
 <ion-content padding>
+  <div class="img-container">
+    <img src={{this.avatarPath}}/>
+    <h2>"Hey friend! Tell me anything."</h2>
+  </div>
+
+
   <ion-item>
     <!--<ion-input type="text" placeholder="What's on your mind?"></ion-input>-->
     <ion-textarea rows="1" id="messageInputBox" placeholder="Send message" (input)="change()" required></ion-textarea>

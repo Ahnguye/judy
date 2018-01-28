@@ -1,3 +1,14 @@
 page-write-new-post {
+  .img-container{
+    display:flex;
+    flex-direction: row;
 
+    justify-content: center;
+  }
+  img {
+    margin-right:10px;
+    width: 30%;
+    max-height: 200px;
+    align-self: center;
+  }
 }

@@ -12,6 +12,13 @@ page-chat {
       display: flex;
       flex-direction: column;
   }
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #d1d1d1;
+
+  }
 
   .scroll-content {
     display: flex;
@@ -73,6 +80,9 @@ page-chat {
     color: #ffffff;
     padding: 15px;
     word-wrap: normal;
+  }
+  .button-inner {
+    background-color: #fa9d02;
   }
 
   //여기

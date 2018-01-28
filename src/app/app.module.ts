@@ -74,7 +74,7 @@ var firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
     EventProvider,
-    ProfileProvider
+    ProfileProvider,
   ]
 })
 export class AppModule { }

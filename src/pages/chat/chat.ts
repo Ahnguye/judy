@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
+
 /**
  * Generated class for the ChatPage page.
  *
@@ -26,12 +27,16 @@ export class ChatPage {
     //   {counselor: true, user: 'David', message: "Hi, I'm David! I work at the Larkin non-profit. How's your day going?"},
     //   {counselor: false, user: 'Anonymous Platypus', message: "Hi."},
     // ];
+    // sendImgPath: any;
     // this.sendImgPath = '/assets/imgs/chatmessagereceive.svg';
     // this.receiveImgPath = '/assets/imgs/chatmessagesend.svg';
     this.messageArray = af.list('/MESSAGES');
   }
 
   newMessage(){
+
+  }
+  callFunction() {
 
   }
 

@@ -15,8 +15,11 @@ import { HomePage } from '../home/home';
   templateUrl: 'write-new-post.html',
 })
 export class WriteNewPostPage {
+  avatarPath: any;
+  //
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.avatarPath = '/assets/imgs/avatar.png';
   }
 
   change() {

@@ -44,6 +44,14 @@
       <ion-col justify-content-center padding-left style="font-size: 18px">
         <b>2018.1.28</b>
       </ion-col>
+      <button ion-button block (click)="callFunction()">
+        <div class="button-container">
+          <button (click)="this.callFunction()" clear color="dark" ion-button icon-only button-inner>
+            <ion-icon clear color="light" name="ios-call-outline"></ion-icon>
+            Call Counselor
+          </button>
+        </div>
+      </button>
     </ion-row>
   </ion-grid>
   <div class="message-wrap" *ngFor="let message of messageArray | async">
