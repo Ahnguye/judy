@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NEW POST</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <!--<ion-input type="text" placeholder="What's on your mind?"></ion-input>-->
+    <ion-textarea rows="1" id="messageInputBox" placeholder="Send message" (input)="change()" required></ion-textarea>
+  </ion-item>
+
+  <button ion-button color="light" (click)="post()">POST</button>
+</ion-content>
