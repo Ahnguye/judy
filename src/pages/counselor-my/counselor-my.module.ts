@@ -9,5 +9,6 @@ import { CounselorMyPage } from './counselor-my';
   imports: [
     IonicPageModule.forChild(CounselorMyPage),
   ],
+  exports: [CounselorMyPage]
 })
 export class CounselorMyPageModule {}

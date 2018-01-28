@@ -4,14 +4,19 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { WriteNewPostPage } from '../pages/write-new-post/write-new-post';
+import { WriteNewPostPageModule } from '../pages/write-new-post/write-new-post.module';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
+import { ChatPageModule } from '../pages/chat/chat.module';
 import { CounselorPage } from '../pages/counselor/counselor';
+import { CounselorPageModule } from '../pages/counselor/counselor.module';
 import { ProfilePage } from '../pages/profile/profile';
+import { ProfilePageModule } from '../pages/profile/profile.module';
 import { CounselorMyPage } from '../pages/counselor-my/counselor-my';
+import { CounselorMyPageModule } from '../pages/counselor-my/counselor-my.module'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,17 +44,18 @@ var firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    WriteNewPostPage,
-    ChatPage,
-    CounselorPage,
-    ProfilePage,
-    CounselorMyPage
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ChatPageModule,
+    CounselorPageModule,
+    ProfilePageModule,
+    WriteNewPostPageModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,7 +65,6 @@ var firebaseConfig = {
     HomePage,
     TabsPage,
     WriteNewPostPage,
-    ChatPage,
     CounselorPage,
     ProfilePage,
     CounselorMyPage

@@ -9,5 +9,8 @@ import { WriteNewPostPage } from './write-new-post';
   imports: [
     IonicPageModule.forChild(WriteNewPostPage),
   ],
+  exports: [
+    WriteNewPostPage
+  ]
 })
 export class WriteNewPostPageModule {}
