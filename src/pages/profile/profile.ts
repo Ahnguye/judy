@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -16,9 +16,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ProfilePage {
   postArray: Array<any> = [];
   categoryArray: Array<any> = [];
+  afPosts: FirebaseListObservable<any[]>;
   counselorArray: Array<any> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public af: AngularFireDatabase, public navParams: NavParams) {
+    this.afPosts = af.list('/POSTS/');
     this.postArray = [
       {postID: 322, title: "I don't know why our teachers are so shitty."}
     ];

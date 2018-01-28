@@ -16,29 +16,33 @@
 <ion-content>
   <div padding>
     <h3>My Categories</h3>
-    <div class="bg-grey">
+    <!-- <div class="bg-grey">
       <ion-list *ngFor="let category of categoryArray">
-        <button ion-button color="light" class="flat-button">{{category.title}}</button>
+        <button ion-button color="secondary" class="flat-button">{{category.title}}</button>
       </ion-list>
     </div>
   </div>
 
+
+ -->
+  <span *ngFor="let category of categoryArray">
+    <button ion-button small color="secondary" class="flat-button">#{{category.title}}</button>
+  </span>
+</div>
+
   <div padding>
-    <h2>Threads</h2>
+    <h3>Threads</h3>
     <div class="bg-grey">
-      <ion-list *ngFor="let post of postArray">
-        <ion-item>
+        <ion-item text-wrap style="font-size: 14px" *ngFor="let post of postArray">
           {{post.title}}
         </ion-item>
-      </ion-list>
     </div>
   </div>
 
   <div padding>
-    <h2>My Past Counselors</h2>
+    <h3>My Past Counselors</h3>
     <ion-list *ngFor="let counselor of counselorArray">
         {{counselor.name}}
     </ion-list>
   </div>
-
 </ion-content>
