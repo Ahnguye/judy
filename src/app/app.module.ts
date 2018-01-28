@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
 import { CounselorPage } from '../pages/counselor/counselor';
 import { ProfilePage } from '../pages/profile/profile';
+import { counselormyPage } from '../pages/counselor-my/counselor-my';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,9 +40,13 @@ var firebaseConfig = {
     HomePage,
     TabsPage,
     WriteNewPostPage,
+<<<<<<< HEAD
     ChatPage,
     CounselorPage,
     ProfilePage
+=======
+    CounselorMyPage
+>>>>>>> counselormyPage
   ],
   imports: [
     BrowserModule,
@@ -57,9 +62,13 @@ var firebaseConfig = {
     HomePage,
     TabsPage,
     WriteNewPostPage,
+<<<<<<< HEAD
     ChatPage,
     CounselorPage,
     ProfilePage
+=======
+    CounselorMyPage
+>>>>>>> counselormyPage
   ],
   providers: [
     StatusBar,
