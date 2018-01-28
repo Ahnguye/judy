@@ -3,7 +3,7 @@
     <ion-title>
     </ion-title>
     <ion-buttons end>
-      <button ion-button block (click)="search()">검색</button>
+      <button ion-button block (click)="search()">search</button>
       <button ion-button block (click)="showCategories()">카테</button>
       <button ion-button block (click)="writeNewPost()">ADD</button>
     </ion-buttons>
@@ -15,18 +15,18 @@
   <ion-card>
     <ion-item>
       <h2>#Family</h2>
-      <p>{{post.date}}</p>
+      <p>{{post.DATE}}</p>
     </ion-item>
 
     <ion-card-content>
-      <p>{{post.text}}</p>
+      <p>{{post.TEXT}}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>{{post.like}}</div>
+          <div>{{post.SCORE}}</div>
         </button>
       </ion-col>
       <ion-col>

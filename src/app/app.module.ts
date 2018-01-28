@@ -16,12 +16,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 var firebaseConfig = {
-  apiKey: "AIzaSyB8A4oL0p4XsKC6yuzrZMeVwgl6lEthRdU",
-  authDomain: "judy-36877.firebaseapp.com",
-  databaseURL: "https://judy-36877.firebaseio.com",
-  projectId: "judy-36877",
-  storageBucket: "judy-36877.appspot.com",
-  messagingSenderId: "890844540616"
+  apiKey: "AIzaSyBDCGL3aHjA8UoaoIP77_cCabHeOSuGxcg",
+  authDomain: "judytelljudy.firebaseapp.com",
+  databaseURL: "https://judytelljudy.firebaseio.com",
+  projectId: "judytelljudy",
+  storageBucket: "judytelljudy.appspot.com",
+  messagingSenderId: "90576902341"
 };
 
 @NgModule({

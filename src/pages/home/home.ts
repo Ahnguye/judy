@@ -11,7 +11,7 @@ export class HomePage {
   posts: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public af: AngularFireDatabase) {
-    this.posts = af.list('/posts/');
+    this.posts = af.list('/POSTS/');
   }
 
   writeNewPost() {
