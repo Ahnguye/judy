@@ -1,0 +1,34 @@
+page-profile {
+  ion-list {
+    display: inline-block;
+  }
+  h2 {
+    font-size: 21px;
+    color: #a1a1a1;
+    font-weight: 400;
+  }
+  .flat-button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    background-color: #e1e1e1;
+  }
+  .header {
+    background-color: #2369db;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  .bg-grey {
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  .item-md {
+    background-color: #f7f7f7;
+  }
+}
