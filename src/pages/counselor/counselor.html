@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color = "primary">
     <ion-title>Choose your counselor</ion-title>
   </ion-navbar>
 
@@ -32,13 +32,13 @@
   <ion-slides pager="true">
     <ion-slide *ngFor="let c of counselors | async">
       <div class="PersonalInfo">
-        <img src={{c.pic}} alt="dog">
+        <img src={{c.pic}} alt="">
         <ion-row>
           <ion-col style="font-size:20px; padding-top:10px; margin-left: 15px">
             {{c.name}}
           </ion-col>
           <ion-col style="font-size:20px; padding-top:10px; margin-right: 15px">
-            {{c.rating}}<ion-icon name="star"></ion-icon>
+            {{c.rating}}<ion-icon name="star" color="primary"></ion-icon>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -54,17 +54,17 @@
       <div class="ContactInfo">
         <ion-row>
           <ion-col text-left>
-            <ion-icon name="call"></ion-icon> &nbsp; phone : {{c.Phone_num}}
+            <ion-icon name="call" color="primary"></ion-icon> &nbsp; phone : {{c.Phone_num}}
           </ion-col>
         </ion-row>
         <ion-row padding-bottom>
           <ion-col text-left>
-            <ion-icon name="mail"></ion-icon> &nbsp; email : {{c.email}}
+            <ion-icon name="mail" color="primary"></ion-icon> &nbsp; email : {{c.email}}
           </ion-col>
         </ion-row>
       </div>
 
-      <button class="gochat" (click)="goChat()" ion-button medium color="dark">Go Chat</button>
+      <button class="gochat" (click)="goChat()" ion-button medium color="primary">Go Chat</button>
     </ion-slide>
 <!--
     <ion-slide>
