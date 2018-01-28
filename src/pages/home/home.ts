@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WriteNewPostPage } from '../write-new-post/write-new-post';
+import { ChatPage } from '../chat/chat';
 import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
@@ -34,6 +35,10 @@ export class HomePage {
 
   writeNewPost() {
     this.navCtrl.push(WriteNewPostPage);
+  }
+
+  goChat() {
+    this.navCtrl.push(ChatPage);
   }
 
 }
