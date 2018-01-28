@@ -8,10 +8,28 @@ import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable }
   templateUrl: 'home.html'
 })
 export class HomePage {
-  posts: FirebaseListObservable<any[]>;
+
+  UrCategory: Array<any> = [];
+
+  afPosts: FirebaseListObservable<any[]>;
+  posts: any[] = [];
+
 
   constructor(public navCtrl: NavController, public af: AngularFireDatabase) {
-    this.posts = af.list('/POSTS/');
+    this.afPosts = af.list('/POSTS/');
+
+    this.UrCategory = [
+      { title: 'food' },
+      { title: 'family' }
+    ];
+
+    this.afPosts.subscribe(
+      postsArray => {
+        this.posts.push(postsArray);
+      }
+    );
+
+    console.log(this.posts);
   }
 
   writeNewPost() {

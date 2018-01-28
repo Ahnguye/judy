@@ -3,30 +3,36 @@
     <ion-title>
     </ion-title>
     <ion-buttons end>
-      <button ion-button block (click)="search()">search</button>
-      <button ion-button block (click)="showCategories()">카테</button>
-      <button ion-button block (click)="writeNewPost()">ADD</button>
+      <button ion-button block (click)="search()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button block (click)="showCategories()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+      <button ion-button block (click)="writeNewPost()">
+        <ion-icon name="document"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let post of posts|async">
+  <ion-item *ngFor="let post of posts">
   <ion-card>
     <ion-item>
       <h2>#Family</h2>
-      <p>{{post.DATE}}</p>
+      <p>{{post}}</p>
     </ion-item>
 
     <ion-card-content>
-      <p>{{post.TEXT}}</p>
+      <!--<p>{{post[].TEXT}}</p>-->
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>{{post.SCORE}}</div>
+          <ion-icon name="heart"></ion-icon>
+         <!--<div>{{post.SCORE}}</div>-->
         </button>
       </ion-col>
       <ion-col>
