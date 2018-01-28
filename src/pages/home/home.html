@@ -1,17 +1,44 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button block (click)="search()">검색</button>
+      <button ion-button block (click)="showCategories()">카테</button>
+      <button ion-button block (click)="writeNewPost()">ADD</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-item *ngFor="let post of posts|async">
+  <ion-card>
+    <ion-item>
+      <h2>#Family</h2>
+      <p>{{post.date}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{post.text}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>{{post.like}}</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+          <!--popup-->
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+  </ion-item>
+
 </ion-content>
