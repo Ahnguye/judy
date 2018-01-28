@@ -15,7 +15,7 @@ import { CounselorPage } from '../pages/counselor/counselor';
 import { CounselorPageModule } from '../pages/counselor/counselor.module';
 import { ProfilePage } from '../pages/profile/profile';
 import { ProfilePageModule } from '../pages/profile/profile.module';
-import { CounselorMyPage } from '../pages/counselor-my/counselor-my';
+
 import { CounselorMyPageModule } from '../pages/counselor-my/counselor-my.module'
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -66,8 +66,7 @@ var firebaseConfig = {
     TabsPage,
     WriteNewPostPage,
     CounselorPage,
-    ProfilePage,
-    CounselorMyPage
+    ProfilePage
   ],
   providers: [
     StatusBar,
