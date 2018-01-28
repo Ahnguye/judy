@@ -17,34 +17,47 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let post of posts">
+  <ion-item *ngFor="let post of posts[0]">
   <ion-card>
-    <ion-item>
-      <h2>#Family</h2>
-      <p>{{post[0].DATE}}</p>
-    </ion-item>
+    <span *ngFor="let c of post.CATEGORY">
+        <span>
+            #{{c}}
+          </span>
+        </span>
+    <p>{{post.DATE}}</p>
 
     <ion-card-content>
-      <!--<p>{{post[].TEXT}}</p>-->
+      <p>{{post.TEXT}}</p>
     </ion-card-content>
 
     <ion-row>
-      <ion-col>
+      <!--<ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="heart"></ion-icon>
-         <!--<div>{{post.SCORE}}</div>-->
+         <div>{{post.SCORE}}</div>
         </button>
-      </ion-col>
+      </ion-col>-->
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
           <div>4 Comments</div>
-          <!--popup-->
+        
         </button>
       </ion-col>
 
     </ion-row>
   </ion-card>
   </ion-item>
+
+    <ion-fab right bottom>
+        <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab color="dark" (click)="search()"><ion-icon name="sad"></ion-icon></button>
+          <button ion-fab color="primary4"><ion-icon name="sad"></ion-icon></button>
+          <button ion-fab color="primary3"><ion-icon name="happyo"></ion-icon></button>
+          <button ion-fab color="primary2"><ion-icon name="happy"></ion-icon></button>
+          <button ion-fab color="primary"><ion-icon name="happy"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
 
 </ion-content>
