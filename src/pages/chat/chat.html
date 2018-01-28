@@ -34,6 +34,11 @@
   <ion-navbar color="primary">
     <ion-title> Chat with Counselor </ion-title>
   </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
   <ion-grid class="room-info">
     <ion-row>
       <ion-col justify-content-center padding-left style="font-size: 18px">
@@ -41,34 +46,30 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-header>
-
-
-<ion-content>
   <div class="message-wrap" *ngFor="let message of messageArray | async">
-    <div class="message right" *ngIf="message.senderid == aefawef123">
+    <div class="message right" *ngIf="message.SENDERID == 'aefawef123'">
       <div class="msg-detail">
         <div class="msg-content">
           <div class="msg-info">
             <p>
-              {{message.date}}
+              {{message.DATE}}
           </div>
           <span class="triangle"></span>
-          <p class="line-breaker">{{message.text}}</p>
+          <p class="line-breaker">{{message.TEXT}}</p>
 
         </div>
       </div>
     </div>
 
-    <div class="message left" *ngIf="message.senderid != aefawef123">
+    <div class="message left" *ngIf="message.SENDERID != 'aefawef123'">
       <div class="msg-detail">
         <div class="msg-content">
           <div class="msg-info">
             <p>
-              {{message.date}}
+              {{message.DATE}}
           </div>
           <span class="triangle"></span>
-          <p class="line-breaker">{{message.text}}</p>
+          <p class="line-breaker">{{message.TEXT}}</p>
         </div>
       </div>
     </div>
@@ -91,6 +92,6 @@
 <ion-footer>
   <ion-item>
     <ion-input fixed type="text"></ion-input>
-    <button ion-button clear item-right (click)="send()" (click)="scrollBottom()"> <b>SEND</b> </button>
+    <button ion-button clear item-right (click)="send()" (click)="newMessage()"> <b>SEND</b> </button>
   </ion-item>
 </ion-footer>

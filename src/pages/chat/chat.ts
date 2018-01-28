@@ -16,9 +16,9 @@ import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/databas
 })
 export class ChatPage {
   messageArray: FirebaseListObservable<any[]>;
-  sendImgPath: any;
-  receiveImgPath: any;
-  public messageForm: any;
+  // sendImgPath: any;
+  // receiveImgPath: any;
+  // public messageForm: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public af: AngularFireDatabase) {
@@ -31,8 +31,8 @@ export class ChatPage {
     this.messageArray = af.list('/MESSAGES');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChatPage');
+  newMessage(){
+    
   }
 
 }

@@ -5,6 +5,8 @@ import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable }
 import { LoginPage } from '../login/login';
 import { CounselorPage } from '../counselor/counselor';
 import { AlertController } from 'ionic-angular';
+import { ChatPage } from '../chat/chat';
+
 
 @Component({
   selector: 'page-home',
@@ -65,6 +67,6 @@ export class HomePage {
     });
     alert.present();
   }
-  
+
 
 }
