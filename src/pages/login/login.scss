@@ -26,4 +26,35 @@ page-login {
     .error-message .item-inner {
          border-bottom: 0 !important;
     }
+    .login-container {
+      margin: 50px;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .background-color {
+      background-color: #fdad26;
+    }
+    img {
+      max-width: 75%;
+      align-self: center;
+    }
+    .text-input::-moz-placeholder {
+      color: #70d055;
+    }
+
+    .text-input:-ms-input-placeholder {
+      color: #70d055;
+    }
+
+    .text-input::-webkit-input-placeholder {
+      text-indent: 0;
+      color: #70d055;
+    }
+    .orange {
+      background-color: #70d055;
+    }
 }
