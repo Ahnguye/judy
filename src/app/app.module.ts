@@ -9,13 +9,17 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
-import { ProfilePage } from '../pages/profile/profile';
+import { CounselorPage } from '../pages/counselor/counselor';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { AuthProvider } from '../providers/auth/auth';
+import { EventProvider } from '../providers/event/event';
+import { ProfileProvider } from '../providers/profile/profile';
 
 var firebaseConfig = {
   apiKey: "AIzaSyBDCGL3aHjA8UoaoIP77_cCabHeOSuGxcg",
@@ -35,14 +39,13 @@ var firebaseConfig = {
     TabsPage,
     WriteNewPostPage,
     ChatPage,
-    ProfilePage
+    CounselorPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,12 +56,15 @@ var firebaseConfig = {
     TabsPage,
     WriteNewPostPage,
     ChatPage,
-    ProfilePage
+    CounselorPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthProvider,
+    EventProvider,
+    ProfileProvider
   ]
 })
 export class AppModule { }
