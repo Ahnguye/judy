@@ -14,7 +14,7 @@ export class AuthProvider {
 
   constructor() { }
 
-  
+
   loginUser(email: string, password: string): firebase.Promise<any> {
     return firebase.auth().signInWithEmailAndPassword(email, password)
       .then(user => {
@@ -29,23 +29,20 @@ export class AuthProvider {
       });
   }
 
-  signupUser(email: string, password: string, name:string,phone_number:string): firebase.Promise<any> {
+  signupUser(email: string, password: string, name: string, phone_number: string, confirmCounselor : string, description: string): firebase.Promise<any> {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(newUser => {
         firebase.database().ref(`/userProfile/${newUser.uid}/email`)
           .set(email);
-        console.log('name: '+name);
+        console.log('name: ' + name);
         firebase.database().ref(`/userProfile/${newUser.uid}/name`)
           .set(name);
         firebase.database().ref(`/userProfile/${newUser.uid}/phone_number`)
           .set(phone_number);
-        firebase.database().ref(`/userProfile/${newUser.uid}/LatLonDiff/lat`)
-          .set(1000);
-          firebase.database().ref(`/userProfile/${newUser.uid}/LatLonDiff/lon`)
-          .set(1000);
-          firebase.database().ref(`/userProfile/${newUser.uid}/LatLonDiff/meetingCode`)
-          .set('');
-
+        firebase.database().ref(`/userProfile/${newUser.uid}/confirmCounselor`)
+          .set(confirmCounselor);
+        firebase.database().ref(`/userProfile/${newUser.uid}/description`)
+          .set(description);
       }).catch(error => console.error(error));
   }
 

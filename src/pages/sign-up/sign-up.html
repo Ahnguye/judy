@@ -48,6 +48,18 @@
       </ion-input>
     </ion-item>
 
+    <ion-item>
+      <ion-label stacked>Confirm Counselor</ion-label>
+      <ion-input formControlName="confirmCounselor" type="text" placeholder="Y/N">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Description</ion-label>
+      <ion-input formControlName="description" type="text" placeholder="Are you a counselor?">
+      </ion-input>
+    </ion-item>
+
     <button ion-button block type="submit" [disabled]="!signupForm.valid">
       Create an Account
     </button>

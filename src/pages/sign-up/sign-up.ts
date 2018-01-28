@@ -37,7 +37,9 @@ export class SignUpPage {
       password: ['', Validators.compose([Validators.minLength(6),
       Validators.required])],
       name:[''],
-      phone_number:['']
+      phone_number:[''], 
+      confirmCounselor:[''],
+      description:['']
     });
   }
 
@@ -52,8 +54,10 @@ export class SignUpPage {
       const password: string = this.signupForm.value.password;
       const name:string = this.signupForm.value.name;
       const phone_number:string = this.signupForm.value.phone_number;
+      const confirmCounselor:string = this.signupForm.value.confirmCounselor;
+      const description:string = this.signupForm.value.description;
       //console.log("name이"+name);
-      this.authProvider.signupUser(email, password,name,phone_number).then(user => {//여기서의 signupUser는 auth.ts에 있는거다.
+      this.authProvider.signupUser(email, password,name,phone_number, confirmCounselor, description).then(user => {//여기서의 signupUser는 auth.ts에 있는거다.
         
         this.loading.dismiss().then(() => {
           this.navCtrl.setRoot(LoginPage);
