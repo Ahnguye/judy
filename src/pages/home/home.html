@@ -1,6 +1,7 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
+      <img src="/assets/imgs/judy_rectangle.png" alt="" height="40">
     </ion-title>
     <ion-buttons end>
       <button ion-button block (click)="search()">
@@ -19,12 +20,12 @@
 <ion-content>
   <ion-item *ngFor="let post of posts[0]">
   <ion-card>
-    <span *ngFor="let c of post.CATEGORY">
-        <span>
-            #{{c}}
-          </span>
+    <ion-card-content>
+        <span *ngFor="let c of post.CATEGORY">
+            <b>#{{c}}</b>
         </span>
-    <p>{{post.DATE}}</p>
+        <span><br />{{post.DATE}}</span>
+    </ion-card-content>
 
     <ion-card-content>
       <p>{{post.TEXT}}</p>
@@ -38,10 +39,9 @@
         </button>
       </ion-col>-->
       <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        
+        <button ion-button icon-left clear small color="secondary">
+          <ion-icon name="text" color="secondary"></ion-icon>
+          <div color="secondary">4 Comments</div>
         </button>
       </ion-col>
 
@@ -49,15 +49,15 @@
   </ion-card>
   </ion-item>
 
-  <ion-fab right bottom>
-    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
-    <ion-fab-list side="left">
-      <button ion-fab color="dark" (click)="presentCounselorInfo()"><ion-icon name="sad"></ion-icon></button>
-      <button ion-fab color="primary4"><ion-icon name="sad"></ion-icon></button>
-      <button ion-fab color="primary3"><ion-icon name="happyo"></ion-icon></button>
-      <button ion-fab color="primary2"><ion-icon name="happy"></ion-icon></button>
-      <button ion-fab color="primary"><ion-icon name="happy"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
+    <ion-fab right bottom>
+        <button ion-fab color="secondary"><ion-icon ios="ios-happy-outline" md="md-happy"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab color="dark" (click)="goChat()"><ion-icon name="sad"></ion-icon></button>
+          <button ion-fab color="primary4"><ion-icon name="sad"></ion-icon></button>
+          <button ion-fab color="primary3"><ion-icon name="happyo"></ion-icon></button>
+          <button ion-fab color="primary2"><ion-icon name="happy"></ion-icon></button>
+          <button ion-fab color="primary"><ion-icon name="happy"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
 
 </ion-content>

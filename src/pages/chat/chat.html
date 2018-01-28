@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content class="content-container">
+<!-- <ion-content class="content-container">
   <div class="counselor-bar">
     <button clear color="dark" ion-button icon-left icon-only button-inner>
       <ion-icon name="ios-arrow-back"></ion-icon>
@@ -28,11 +28,54 @@
         </div>
       </div>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title> Chat with Counselor </ion-title>
+  </ion-navbar>
+  <ion-grid class="room-info">
+    <ion-row>
+      <ion-col justify-content-center padding-left style="font-size: 18px">
+        <b>2018.1.28</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
 
 
-<ion-footer>
-  <ion-toolbar>
+<ion-content>
+  <div class="message-wrap" *ngFor="let message of messageArray | async">
+    <div class="message right" *ngIf="message.senderid == aefawef123">
+      <div class="msg-detail">
+        <div class="msg-content">
+          <div class="msg-info">
+            <p>
+              {{message.date}}
+          </div>
+          <span class="triangle"></span>
+          <p class="line-breaker">{{message.text}}</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="message left" *ngIf="message.senderid != aefawef123">
+      <div class="msg-detail">
+        <div class="msg-content">
+          <div class="msg-info">
+            <p>
+              {{message.date}}
+          </div>
+          <span class="triangle"></span>
+          <p class="line-breaker">{{message.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- <ion-footer>
     <div class="input-container">
       <ion-list class="input-box">
         <ion-item>
@@ -44,8 +87,10 @@
         <ion-icon name="ios-send"></ion-icon>
       </button>
     </div>
-  </ion-toolbar>
+</ion-footer> -->
+<ion-footer>
+  <ion-item>
+    <ion-input fixed type="text"></ion-input>
+    <button ion-button clear item-right (click)="send()" (click)="scrollBottom()"> <b>SEND</b> </button>
+  </ion-item>
 </ion-footer>
-
-
-</ion-content>
